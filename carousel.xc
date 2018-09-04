@@ -6,7 +6,7 @@
   "carousel": {
     // false - Disable customizable carousel.
     // false - Отключить настраиваемую карусель.
-    "enabled": true,
+    "enabled": false,
     // Type of cells - "default" (depends from window size), "normal" or "small"
     // Вид ячеек - "default" (в зависимости от размера окна), "normal" (обычные), "small" (маленькие)
     "cellType": "default",
@@ -21,22 +21,25 @@
     "rows": 0,
     // Background transparency (default - 100)
     // Прозрачность подложки (по умолчанию - 100)
-    "backgroundAlpha": 70,
+    "backgroundAlpha": 100,
     // Mouse wheel scrolling speed multiplier (default - 1)
     // Множитель скорости прокрутки колесом мыши (по умолчанию - 1)
     "scrollingSpeed": 1,
     // true - hide cell "Buy vehicle".
     // true - скрыть ячейку "Купить машину".
-    "hideBuyTank": true,
+    "hideBuyTank": false,
     // true - hide cell "Buy slot".
     // true - скрыть ячейку "Купить слот".
-    "hideBuySlot": true,
+    "hideBuySlot": false,
     // true - show total slots count in the "Buy vehicle" cell.
     // true - показывать общее количество слотов в ячейке "Купить машину".
     "showTotalSlots": false,
     // true - show used slots count in the "Buy slot" cell.
     // true - показывать количество занятых слотов в ячейке "Купить слот".
     "showUsedSlots": true,
+    // set to false to remove background for locked vehicles (default: true)
+    // поставить false, чтобы отключить фон для заблокированной техники (по-умолчанию: true)
+    "enableLockBackground": true,
     // Visibility filters.
     // Видимость фильтров.
     "filters": {
@@ -64,7 +67,7 @@
     // "nation", "type", "level", "-level", "maxBattleTier", "-maxBattleTier", "premium", "-premium",
     // "winRate", "-winRate", "markOfMastery", "-markOfMastery", "xtdb", "-xtdb", "xte", "-xte",
     // "damageRating", "-damageRating", "marksOnGun", "-marksOnGun"
-    "sorting_criteria": ["type", "level", "nation"],
+    "sorting_criteria": ["nation", "type", "level"],
     // Suppress the tooltips for tanks in carousel
     // Убрать подсказки к танкам в карусели
     "suppressCarouselTooltips": false

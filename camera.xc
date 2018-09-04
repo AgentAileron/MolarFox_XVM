@@ -6,16 +6,16 @@
   "camera": {
     // false - disable camera settings.
     // false - отключить настройки камеры.
-    "enabled": true,
+    "enabled": false,
     // Arcade mode
     // Аркадный режим
     "arcade": {
       // Camera distance range: [min, max], default - [2, 25]
       // Отдаление камеры: [мин, макс], по умолчанию - [2, 25]
-      "distRange": [2, 125],
+      "distRange": [2, 25],
       // Start distance (null for default behavior - saved state from the last battle)
       // Начальная дистанция (null для поведения по умолчанию - сохраненная позиция из последнего боя)
-      "startDist": 13,
+      "startDist": null,
       // Чувствительность прокрутки (default = 5)
       // Scroll sensitivity (по умолчанию = 5)
       "scrollSensitivity": 5,
@@ -28,10 +28,10 @@
     "postmortem": {
       // Camera distance range: [min, max], default - [2, 25]
       // Отдаление камеры: [мин, макс], по умолчанию - [2, 25]
-      "distRange": [2, 200],
+      "distRange": [2, 25],
       // Start distance (null for default behavior - maximum distance)
       // Начальная дистанция (null для поведения по умолчанию - максимальная дистанция)
-      "startDist": 13,
+      "startDist": null,
       // Чувствительность прокрутки (default = 5)
       // Scroll sensitivity (по умолчанию = 5)
       "scrollSensitivity": 5,
@@ -44,7 +44,7 @@
     "strategic": {
       // Camera distance range: [min, max], default - [40, 100]
       // Отдаление камеры: [мин, макс], по умолчанию - [40, 100]
-      "distRange": [40, 200],
+      "distRange": [40, 100],
       // false - disable the shot recoil effect (for the enabled dynamic camera option)
       // false - выключить эффект отдачи от выстрела (для включенной опции динамической камеры)
       "shotRecoilEffect": true
@@ -59,10 +59,10 @@
       "zooms": [2, 4, 8],
       // Start zoom value (null for default behavior - last used state)
       // Начальное значение кратности (null для поведения по умолчанию - последнее использовавшееся значение)
-      "startZoom": 2,
-      // Zoom Indicator (see playersPanel.xc for parameters description)
+      "startZoom": null,
+      // Zoom Indicator (see extra-field.txt for parameters description)
       // Global macros allowed in all fields
-      // Индикатор масштаба (см. playersPanel.xc для описания параметров)
+      // Индикатор масштаба (см. extra-field.txt для описания параметров)
       // Можно использовать глобальные макросы во всех полях
       "zoomIndicator": {
         // false - disable.
@@ -82,12 +82,6 @@
         "rotation": 0,
         "scaleX": 1,
         "scaleY": 1,
-        // Horizonatal text alignment (left, center, right)
-        // Горизонтальное выравнивание текста (left, center, right)
-        "align": "left",
-        // Vertical text alignment (top, center, bottom)
-        // Вертикальное выравнивание текста (top, center, bottom)
-        "valign": "center",
         // Background color
         // Цвет фона
         "bgColor": null,
@@ -95,9 +89,16 @@
         // Цвет рамки
         "borderColor": null,
         "antiAliasType": "advanced",
+        "textFormat": {
+          "font": "$TitleFont",
+          "size": 16,
+          "color": "0x95CB29",
+          "align": "left",
+          "valign": "center"
+        },
         // Text format
         // Формат текста
-        "format": "<font face='$TitleFont' color='#95CB29' size='16'>x{{zoom}}</font>",
+        "format": "x{{zoom}}",
         // Shadow options
         // Параметры тени
         "shadow": {
